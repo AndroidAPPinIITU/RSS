@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:STO"
+           
+             x:Class="STO.MainPage">
+
+
+    <MasterDetailPage.Master>
+        <ContentPage Title="≡" BackgroundColor="#FFF" Padding="0" >
+
+            <ContentPage.Content>
+                <StackLayout Spacing="0">
+                    <StackLayout BackgroundColor="#90A4AE"
+                     HeightRequest="150">
+
+                        <Grid HorizontalOptions="Start" ColumnSpacing="0" RowSpacing="0" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="40*" />
+                                <ColumnDefinition Width="60*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="5*"/>
+                            </Grid.RowDefinitions>
+
+                           
+
+
+                            <Grid  ColumnSpacing="0" RowSpacing="0" Grid.Column="1" Grid.Row="0" Padding="10,40">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+
+                                </Grid.ColumnDefinitions>
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="33*"/>
+                                    <RowDefinition Height="33*"/>
+                                    <RowDefinition Height="33*"/>
+
+                                </Grid.RowDefinitions>
+
+
+                                <Label x:Name="NameFn" Text="" Grid.Column="0" Grid.Row="0"  VerticalOptions="Start"/>
+                                <Label x:Name="NameSn" Text="" Grid.Column="0" Grid.Row="1" VerticalOptions="Center" />
+                                <Label x:Name="NamePn" Text="" Grid.Column="0" Grid.Row="2" VerticalOptions="End" />
+
+
+
+                            </Grid>
+                        </Grid>
+                    </StackLayout>
+
+
+                    <ListView x:Name="navigationDrawerList"
+                  RowHeight="60"
+                  SeparatorVisibility="Default"
+                  BackgroundColor="#FFF"
+                  ItemSelected="OnMenuItemSelected"
+                              
+                 
+          >
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+
+                                    <!-- Main design for our menu items -->
+                                    <StackLayout VerticalOptions="FillAndExpand"
+                                         Orientation="Horizontal"
+                                         Padding="20,10,0,10"
+                                         Spacing="20">
+
+                                        <Image Source="{Binding Icon}"
+                                     WidthRequest="20"
+                                     HeightRequest="20"
+                                     VerticalOptions="Center" />
+
+                                        <Label Text="{Binding Title}"
+                                     FontSize="Small"
+                                     VerticalOptions="Center"
+                                     TextColor="Black">
+                                            
+                                        </Label>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        
+    </MasterDetailPage.Detail>
+</MasterDetailPage>

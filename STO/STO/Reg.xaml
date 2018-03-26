@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="STO.Reg">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#fff" >
+            <StackLayout Margin="0, 100, 0, 0"  Padding="30, 0" Spacing="10" BackgroundColor="#fff" >
+                <Frame OutlineColor ="#DA0F0F" Padding = "5,5,5,5" CornerRadius ="30" HasShadow="True">
+                    <Entry Keyboard="Email"  PlaceholderColor="Gray"  HorizontalTextAlignment="Center" Placeholder="Email" TextColor="Black"   />
+                </Frame>
+                <Entry PlaceholderColor="Gray" Placeholder="Пароль" HorizontalTextAlignment="Center" TextColor="Black" IsPassword="True"/>
+                <Entry PlaceholderColor="Gray" Placeholder="Повторите пароль"  HorizontalTextAlignment="Center" TextColor="Black" IsPassword="True"/>
+
+                <!-- TO Home.xaml -->
+                <Button x:Name="LoginButton"  Text="Зарегистрироваться" Clicked="RegComplete"  BackgroundColor="#68B436" TextColor="White"  Margin="0,30, 0,10" />
+
+                <Label FontSize="12" Text="Есть аккаунт? Войти" HorizontalOptions="Center" TextColor="Gray" >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="LogComplete"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <!--<Button Text="Есть аккаунт? Войти" FontSize="10"  BackgroundColor="#fff"  TextColor="Black"  Clicked="LogComplete"  HorizontalOptions="Fill" VerticalOptions="EndAndExpand"/>-->
+            </StackLayout>
+        </StackLayout>
+      
+    </ContentPage.Content>
+</ContentPage>
